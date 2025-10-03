@@ -1,4 +1,4 @@
-# Reiffert Augenoptik Astro website
+# Reiffert Augenoptik Astro Website
 
 ## Usage
 
