@@ -1,12 +1,12 @@
 # Reiffert Augenoptik Astro website
 
-## How to develop
+## Usage
 
-Start by installing all requirements:
+### Requirements
 
 - [Node.js v24](https://nodejs.org/en)
 
-Then, clone the project and run it.
+### Setup
 
 ```bash
 git clone git@github.com:reiffert-augenoptik/astro.git
