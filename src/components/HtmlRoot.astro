@@ -1,6 +1,6 @@
 ---
-import HtmlHead from "./HtmlHead.astro";
-import "../styles/global.css";
+import HtmlHead from './HtmlHead.astro';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -12,7 +12,16 @@ import "../styles/global.css";
 </html>
 
 <style>
+  html {
+    overscroll-behavior-y: contain;
+    background-color: var(--color-bg-app);
+    color: var(--color-on-app);
+  }
+
   body {
+    display: flex;
+    flex-direction: column;
     margin: 0px;
+    min-height: 100svh;
   }
 </style>

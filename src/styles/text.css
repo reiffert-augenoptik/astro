@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Minerva Modern';
+  src: url('/fonts/MinervaModern_Regular.otf');
+}
+
+@font-face {
+  font-family: 'Minerva Modern Bold';
+  src: url('/fonts/MinervaModern_Bold.otf');
+}
+
+body {
+  font-family: 'Minerva Modern', sans-serif;
+}
+
+b {
+  font-family: 'Minerva Modern Bold', sans-serif;
+  font-weight: normal;
+}

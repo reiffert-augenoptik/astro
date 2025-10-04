@@ -1,11 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../images/Logo2018_600.jpg";
+import { Image } from 'astro:assets';
+import logo from '../images/Logo2018_600.jpg';
+import { appConfig } from '../../app.config';
 ---
 
 <header>
   <div>
-    <Image src={logo} alt="foo bar" />
+    <Image src={logo} alt={appConfig.title} />
   </div>
 </header>
 
@@ -16,6 +17,8 @@ import logo from "../images/Logo2018_600.jpg";
     height: var(--app-header-height);
     align-items: center;
     justify-content: center;
+    background-color: var(--color-bg-header);
+    color: var(--color-on-header);
   }
 
   img {

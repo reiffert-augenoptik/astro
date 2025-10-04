@@ -1,11 +1,29 @@
 :root {
+  /* Layout */
   --app-header-height: 105px;
   --logo-width: 128px;
+  --content-padding: 1rem;
+  --border-radius: 0.25rem;
+
+  /* Colors */
+  --color-bg-app: rgb(194, 125, 61, 0.8);
+  --color-on-app: #fff;
+  --color-bg-content: #fff;
+  --color-on-content: #4d4f56;
+  --color-bg-header: var(--color-bg-content);
+  --color-on-header: var(--color-on-content);
+  --color-bg-footer: var(--color-bg-app);
+  --color-on-footer: var(--color-on-app);
+
+  /* Misc */
+  --footer-social-size: 48px;
 }
 
 @media only screen and (min-width: 800px) {
   :root {
     --app-header-height: 180px;
     --logo-width: 256px;
+    --content-padding: 1.5rem;
+    --footer-social-size: 72px;
   }
 }

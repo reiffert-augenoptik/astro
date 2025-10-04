@@ -1,0 +1,26 @@
+---
+const { href } = Astro.props;
+---
+
+<a href={href}>
+  <slot />
+</a>
+
+<style>
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: large;
+    color: inherit;
+    padding: 0.25rem 0.5rem;
+  }
+
+  a:hover,
+  a:active {
+    filter: brightness(0.9);
+  }
+
+  a:visited {
+    color: inherit;
+  }
+</style>
