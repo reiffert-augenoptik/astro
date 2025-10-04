@@ -8,4 +8,4 @@ on:
 
 jobs:
   run_checks:
-    uses: ./check.yaml@main
+    uses: ./.github/workflows/check.yml@main
