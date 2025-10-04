@@ -1,6 +1,7 @@
 # Reiffert Augenoptik Astro Website
 
 ![Main Workflow](https://github.com/reiffert-augenoptik/astro/actions/workflows/main.yml/badge.svg)
+![Static Badge](https://img.shields.io/badge/License%2C%20Propietary)
 
 ## Usage
 
