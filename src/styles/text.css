@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Minerva Modern';
-  src: url('/fonts/MinervaModern_Regular.otf');
+  src: url('fonts/MinervaModern_Regular.otf');
 }
 
 @font-face {
   font-family: 'Minerva Modern Bold';
-  src: url('/fonts/MinervaModern_Bold.otf');
+  src: url('fonts/MinervaModern_Bold.otf');
 }
 
 body {
