@@ -6,6 +6,11 @@ on:
     branches:
     - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   run_checks:
     name: Run checks
@@ -13,3 +18,5 @@ jobs:
   deploy_to_github_pages:
     name: Deploy to GitHub Pages
     uses: ./.github/workflows/deploy.yml
+    needs:
+      - run_checks
