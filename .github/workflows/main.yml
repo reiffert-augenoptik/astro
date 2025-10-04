@@ -10,3 +10,6 @@ jobs:
   run_checks:
     name: Run checks
     uses: ./.github/workflows/check.yml
+  deploy_to_github_pages:
+    name: Deploy to GitHub Pages
+    uses: ./.github/workflows/deploy.yml
