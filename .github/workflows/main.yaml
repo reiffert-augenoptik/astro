@@ -1,0 +1,11 @@
+name: Main Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+
+jobs:
+  run_checks:
+    uses: ./check.yaml
