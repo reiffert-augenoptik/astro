@@ -12,7 +12,15 @@ body {
   font-family: 'Minerva Modern', sans-serif;
 }
 
-b {
+b,
+strong {
   font-family: 'Minerva Modern Bold', sans-serif;
   font-weight: normal;
+}
+
+hr {
+  background-color: #ddd;
+  height: 1px;
+  border-radius: 50%;
+  border: none;
 }
