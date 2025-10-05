@@ -4,6 +4,10 @@
   --logo-width: 128px;
   --content-padding: 1rem;
   --border-radius: 0.25rem;
+  --content-width-small: 512px;
+  --content-width-medium: 1024px;
+  --content-width-large: 1440px;
+  --content-width-full: 100%;
 
   /* Colors */
   --color-bg-app: rgb(194, 125, 61, 0.8);

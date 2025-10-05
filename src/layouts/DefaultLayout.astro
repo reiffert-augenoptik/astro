@@ -3,11 +3,13 @@ import HtmlRoot from '../components/HtmlRoot.astro';
 import AppHeader from '../components/AppHeader.astro';
 import AppContent from '../components/AppContent.astro';
 import AppFooter from '../components/AppFooter.astro';
+
+const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
 ---
 
 <HtmlRoot>
   <AppHeader />
-  <AppContent>
+  <AppContent align={frontmatter.align} width={frontmatter.width}>
     <slot />
   </AppContent>
   <AppFooter />

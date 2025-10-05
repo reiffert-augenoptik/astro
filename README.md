@@ -24,3 +24,19 @@ Some of the business details (e.g. name, adress or opening hours) are maintained
 
 - Basically everything
 - Sitemap integration
+
+## Editing
+
+### Markdown frontmatter
+
+Markdown files support what is called a `frontmatter` section. Frontmatter is written in `yaml` syntax, located at the top of the document and annotated with two lines of `---`:
+
+```md
+---
+# Frontmatter section
+---
+
+Markdown content
+```
+
+Astro supports a couple of [built-in frontmatter attributes](https://docs.astro.build/en/basics/layouts/#markdown-layouts). On top of that, this page supports additional frontmatter attributes. They are defined in [`src/types.d.ts`](src/types.d.ts).

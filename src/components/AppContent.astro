@@ -1,13 +1,21 @@
 ---
-
+const { align = 'start', width = 'large' } = { ...Astro.props };
 ---
 
-<main></main>
+<main style={`text-align: ${align};`}>
+  <article style={`max-width: var(--content-width-${width});`}>
+    <slot />
+  </article>
+</main>
 
 <style>
   main {
     flex-grow: 1;
     background-color: var(--color-bg-content);
     color: var(--color-on-content);
+  }
+
+  article {
+    margin: 0 auto;
   }
 </style>
