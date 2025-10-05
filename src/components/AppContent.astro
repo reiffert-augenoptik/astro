@@ -11,6 +11,8 @@ const { align = 'start', width = 'large' } = { ...Astro.props };
 <style>
   main {
     flex-grow: 1;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
     padding-bottom: 2rem;
     background-color: var(--color-bg-content);
     color: var(--color-on-content);
