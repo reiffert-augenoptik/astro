@@ -4,7 +4,10 @@ import AppHeader from '../components/AppHeader.astro';
 import AppContent from '../components/AppContent.astro';
 import AppFooter from '../components/AppFooter.astro';
 
-const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const { frontmatter }: { frontmatter: Frontmatter } = {
+  frontmatter: {},
+  ...Astro.props,
+};
 ---
 
 <HtmlRoot>
