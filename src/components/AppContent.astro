@@ -13,7 +13,7 @@ const { align = 'start', width = 'large' } = { ...Astro.props };
     flex-grow: 1;
     padding-left: var(--content-padding);
     padding-right: var(--content-padding);
-    padding-bottom: 2rem;
+    padding-bottom: calc(2 * var(--content-padding));
     background-color: var(--color-bg-content);
     color: var(--color-on-content);
   }
