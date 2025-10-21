@@ -1,0 +1,42 @@
+---
+const { height, speed = 0.5 } = { ...Astro.props };
+---
+
+<div class="parallax-outer" style={`height: ${height}px;`}>
+  <div class="parallax-inner">
+    <slot />
+  </div>
+</div>
+
+<style define:vars={{ parallaxSpeed: speed }}>
+  .parallax-outer {
+    left: calc(-1 * var(--content-padding));
+    width: 100svw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .parallax-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    will-change: transform;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(50% + (var(--parallaxSpeed) * 100%));
+      object-fit: cover;
+      object-position: center;
+      transform: translateY(
+        calc(var(--parallaxSpeed) * -1 * var(--scrollY, 0) * -1px)
+      );
+    }
+  }
+</style>

@@ -15,6 +15,7 @@ import '@src/styles/global.css';
   html {
     background-color: var(--color-bg-app);
     color: var(--color-on-app);
+    overflow-x: hidden;
   }
 
   body {
@@ -24,3 +25,13 @@ import '@src/styles/global.css';
     min-height: 100svh;
   }
 </style>
+
+<script>
+  // Used by Parallax components
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty(
+      '--scrollY',
+      String(window.scrollY)
+    );
+  });
+</script>
