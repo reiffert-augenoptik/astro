@@ -4,7 +4,7 @@
   --logo-width: 128px;
   --content-padding: 0.5rem;
   --border-radius: 0.25rem;
-  --content-width-small: 512px;
+  --content-width-small: 768px;
   --content-width-medium: 1024px;
   --content-width-large: 1440px;
   --content-width-full: 100%;
@@ -18,6 +18,10 @@
   --color-on-header: var(--color-on-content);
   --color-bg-footer: var(--color-bg-app);
   --color-on-footer: var(--color-on-app);
+
+  /* Filters */
+  --filter-link-default: brightness(125%);
+  --filter-link-hover: brightness(175%);
 
   /* Misc */
   --footer-social-size: 48px;

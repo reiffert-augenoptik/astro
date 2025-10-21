@@ -1,0 +1,7 @@
+---
+const { align = 'start', width = 'large' } = { ...Astro.props };
+---
+
+<div style={`text-align: ${align}; max-width: var(--content-width-${width});`}>
+  <slot />
+</div>

@@ -24,3 +24,15 @@ hr {
   border-radius: 50%;
   border: none;
 }
+
+a,
+a:visited {
+  color: inherit;
+  filter: var(--filter-link-default);
+}
+
+a:hover,
+a:active,
+a:focus {
+  filter: var(--filter-link-hover);
+}
