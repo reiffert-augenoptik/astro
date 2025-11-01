@@ -19,6 +19,8 @@
   --color-on-header: var(--color-on-content);
   --color-bg-footer: var(--color-bg-app);
   --color-on-footer: var(--color-on-app);
+  --color-bg-primary: #1a1f2d;
+  --color-on-primary: #fff;
 
   /* Filters */
   --filter-link-default: brightness(125%);

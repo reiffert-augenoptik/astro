@@ -7,11 +7,18 @@ width: 'full'
 import { Image } from 'astro:assets';
 import Parallax from '@components/Parallax.astro';
 import Box from '@components/Box.astro';
-import parallax1 from './parallax-1.jpg';
-import parallax2 from './parallax-2.jpg';
+import Grid from '@components/Grid.astro';
+import Card from '@components/Card.astro';
+import LinkButton from '@components/LinkButton.astro';
+import img1 from './img-1.jpg';
+import img2 from './img-2.jpg';
+import img3 from './img-3.jpg';
+import img4 from './img-4.jpg';
+import img5 from './img-5.jpg';
+import img6 from './img-6.png';
 
 <Parallax client:load>
-    <Image src={parallax1} alt=""/>
+  <Image src={img1} alt="" />
 </Parallax>
 
 # Brillenverliebt.
@@ -26,12 +33,46 @@ Obendrauf kommt eine Prise Brillenverliebtheit - fertig.
 Deine neue Brille findest Du hier.
 Lerne uns kennen.
 
-<button>TEAM</button>
-
+<br />
+<LinkButton href="team">DAS TEAM</LinkButton>
+<br />
+<br />
 <hr />
-
 </Box>
 
+<Grid>
+  <Card height="600" width="400" caption="Brillen" href="brillen">
+    <Image src={img2} alt="" />
+  </Card>
+  <Card height="600" width="400" caption="Hörakustik" href="hoerakustik">
+    <Image src={img3} alt="" />
+  </Card>
+  <Card height="600" width="400" caption="Kontaktlinsen" href="kontaktlinsen">
+    <Image src={img4} alt="" style="object-position: left"/>
+  </Card>
+</Grid>
+
+<br />
+
 <Parallax>
-  <Image src={parallax2} alt="" />
+  <Image src={img5} alt="" />
 </Parallax>
+
+# Regional verbunden.
+
+<Box width="x-small" align="center">
+    Reiffert Augenoptik steht für Professionalität und die Erfüllung höchster Ansprüche.
+    Ausgebildete Fachkräfte finden für Dich die perfekte Brille und Kontaktlinse.
+    Mit Hilfe modernster Technologien und umfangreicher Tests
+    verschaffen wir Dir das bestmögliche Sehen in allen Situationen.
+
+    Für diese Maxime vertrauen wir auf Partner aus der Region.
+    Deine neuen Brillengläser kommen von Zeiss aus Aalen.
+    Der Boden in unserem Ladengeschäft besteht aus fränkischem Muschelkalk.
+    Innenarchitekt, Grafikdesigner und viele unserer weiteren Partner
+    kommen aus Giebelstadt oder der direkten Umgebung.
+
+    Durch diese regionale Verbundenheit ermöglichen wir Dir die beste Qualität.
+    Sprich uns gerne darauf an.
+
+</Box>
