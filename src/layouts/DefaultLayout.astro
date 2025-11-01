@@ -17,3 +17,18 @@ const { frontmatter }: { frontmatter: Frontmatter } = {
   </AppContent>
   <AppFooter />
 </HtmlRoot>
+
+<script>
+  // @ts-ignore
+  import simpleParallax from 'simple-parallax-js/vanilla';
+
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.parallax img');
+    if (images.length > 0) {
+      new simpleParallax(images, {
+        scale: 1.5,
+      });
+    }
+  });
+</script>

@@ -1,0 +1,37 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+align: 'center'
+width: 'full'
+---
+
+import { Image } from 'astro:assets';
+import Parallax from '@components/Parallax.astro';
+import Box from '@components/Box.astro';
+import parallax1 from './parallax-1.jpg';
+import parallax2 from './parallax-2.jpg';
+
+<Parallax client:load>
+    <Image src={parallax1} alt=""/>
+</Parallax>
+
+# Brillenverliebt.
+
+<Box width="x-small" align="center">
+Bei Reiffert Augenoptik stehen Deine Wünsche und Ideen im Mittelpunkt.
+Unser Faible für schöne und hochwertige Brillen macht unsere Auswahl so einzigartig.
+
+Das Rezept für ein perfektes Ergebnis: Ausgebildete Augenoptiker nehmen sich viel Zeit für Dich, bringen jahrelange Erfahrung und fundiertes Fachwissen in die Beratung ein.
+Obendrauf kommt eine Prise Brillenverliebtheit - fertig.
+
+Deine neue Brille findest Du hier.
+Lerne uns kennen.
+
+<button>TEAM</button>
+
+<hr />
+
+</Box>
+
+<Parallax>
+  <Image src={parallax2} alt="" />
+</Parallax>

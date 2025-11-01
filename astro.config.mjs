@@ -1,7 +1,7 @@
 // @ts-check
-import mdx from '@astrojs/mdx';
 import { defineConfig } from 'astro/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
