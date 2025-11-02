@@ -10,6 +10,7 @@ import Box from '@components/Box.astro';
 import Grid from '@components/Grid.astro';
 import Card from '@components/Card.astro';
 import LinkButton from '@components/LinkButton.astro';
+import ImageWithText from '@components/ImageWithText.astro';
 import img1 from './img-1.jpg';
 import img2 from './img-2.jpg';
 import img3 from './img-3.jpg';
@@ -75,4 +76,12 @@ Lerne uns kennen.
     Durch diese regionale Verbundenheit ermöglichen wir Dir die beste Qualität.
     Sprich uns gerne darauf an.
 
+  <ImageWithText>
+    <Image slot="image" src={img6} alt=""/>
+    <p slot="text">
+    ## Regionale Unterstützung
+
+    Wir freuen uns, bekannt zu geben, dass wir ab sofort stolzer Förderer der Würzburg Baskets sind. Gemeinsam möchten wir unsere lokale Gemeinschaft stärken und den Sport fördern. Vielen Dank für das Vertrauen – wir freuen uns auf eine erfolgreiche Saison!
+    </p>
+  </ImageWithText>
 </Box>

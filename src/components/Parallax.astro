@@ -3,23 +3,28 @@ const { height = 600 } = { ...Astro.props };
 const heightInPixels = `${600}px`;
 ---
 
-<div class="parallax" style={`height: ${height}px`}>
+<div class="parallax">
   <slot />
 </div>
 
 <style define:vars={{ heightInPixels }}>
   .parallax {
     margin-left: calc(-1 * var(--content-padding));
-    height: var(--heightInPixels);
+    height: auto;
+    max-height: var(--heightInPixels);
     width: 100svw;
+    max-width: 100svw;
     overflow: hidden;
 
     img {
-      object-position: 'center center';
-      height: var(--heightInPixels);
-      width: auto;
+      display: inline-block;
+      scale: 0.6;
+      height: auto;
+      width: 100%;
+      max-width: 100%;
       object-position: center center;
       aspect-ratio: auto;
+      position: relative;
     }
   }
 </style>

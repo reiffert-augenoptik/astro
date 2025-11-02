@@ -1,0 +1,52 @@
+---
+
+---
+
+<div class="image-with-textbox">
+  <slot name="image" />
+  <div class="textbox">
+    <slot name="text" />
+  </div>
+</div>
+
+<style>
+  .image-with-textbox {
+    --transform-container: translateX(0);
+    --transform-textbox: translateX(0);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: var(--transform-container);
+    max-width: 100svw;
+
+    img {
+      height: auto;
+      max-width: 400px;
+      aspect-ratio: auto;
+    }
+
+    .textbox {
+      top: 0;
+      right: 0;
+      transform: var(--transform-textbox);
+      max-width: 400px;
+      padding: var(--content-padding);
+      background-color: var(--color-bg-primary);
+      color: var(--color-on-primary);
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .image-with-textbox {
+      --transform-container: translateX(-12rem);
+      --transform-textbox: translate(16rem, 4rem);
+
+      .textbox {
+        position: absolute;
+      }
+    }
+  }
+</style>
