@@ -1,0 +1,66 @@
+---
+import NavLink from '@components/NavLink.astro';
+---
+
+<>
+  <aside id="sidebar" data-open="false">
+    <nav>
+      <NavLink href="brillen">Brillen</NavLink>
+      <NavLink href="hoerakustik">Hörakustik</NavLink>
+      <NavLink href="kontaktlinsen">Kontaktlinsen</NavLink>
+      <NavLink href=" team">Team</NavLink>
+      <NavLink href="aktuelles">Aktuelles</NavLink>
+      <NavLink href="termin">Termin</NavLink>
+      <NavLink href="kontakt">Kontakt</NavLink>
+    </nav>
+  </aside>
+</>
+
+<script>
+  import { isSidebarOpen } from '@src/store';
+
+  const sidebar = document.getElementById('sidebar')!;
+
+  isSidebarOpen.subscribe((isOpen) => {
+    if (isOpen) {
+      sidebar.setAttribute('data-open', 'true');
+      document.documentElement.style.setProperty('overflow-y', 'hidden');
+    } else {
+      sidebar.setAttribute('data-open', 'false');
+      document.documentElement.style.setProperty('overflow-y', null);
+    }
+  });
+</script>
+
+<style>
+  #sidebar {
+    --left: calc(-1.1 * 100svw);
+    position: fixed;
+    top: 0px;
+    left: var(--left);
+    transition: left 200ms;
+    width: 100svw;
+    height: 100svh;
+    background-color: var(--color-bg-content);
+    color: var(--color-on-content);
+    z-index: 79;
+
+    &[data-open='true'] {
+      left: 0;
+    }
+
+    > nav {
+      width: 100%;
+      margin-top: var(--app-header-height);
+      height: calc(100svh - var(--app-header-height));
+      display: flex;
+      flex-direction: column;
+      padding: var(--content-padding);
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    --display-sidebar: none;
+  }
+</style>

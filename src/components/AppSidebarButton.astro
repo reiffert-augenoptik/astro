@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<button id="sidebar-button" title="Navigation">
+  <Icon id="sidebar-button-icon" name="mdi-light:menu" />
+</button>
+
+<script>
+  import { isSidebarOpen } from '@src/store';
+
+  const button = document.getElementById('sidebar-button')!;
+  const icon = document.getElementById('sidebar-button-icon')!;
+
+  button.addEventListener('click', () =>
+    isSidebarOpen.set(!isSidebarOpen.get())
+  );
+</script>
+
+<style>
+  #sidebar-button {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    cursor: pointer;
+    color: var(--color-on-content);
+
+    &:hover {
+      filter: var(--filter-link-hover);
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    #sidebar-button {
+      display: none;
+    }
+  }
+</style>

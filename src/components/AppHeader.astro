@@ -2,12 +2,26 @@
 import { Image } from 'astro:assets';
 import logo from '@assets/Logo2018_600.jpg';
 import { appConfig } from '@root/app.config';
+import AppSidebarButton from '@components/AppSidebarButton.astro';
+import NavLink from '@components/NavLink.astro';
 ---
 
 <header>
-  <a href="">
+  <AppSidebarButton />
+  <nav>
+    <NavLink href="brillen">Brillen</NavLink>
+    <NavLink href="hoerakustik">Hörakustik</NavLink>
+    <NavLink href="kontaktlinsen">Kontaktlinsen</NavLink>
+  </nav>
+  <a class="root-link" href="">
     <Image src={logo} alt={appConfig.title} />
   </a>
+  <nav>
+    <NavLink href=" team">Team</NavLink>
+    <NavLink href="aktuelles">Aktuelles</NavLink>
+    <NavLink href="termin">Termin</NavLink>
+    <NavLink href="kontakt">Kontakt</NavLink>
+  </nav>
 </header>
 
 <style>
@@ -21,12 +35,28 @@ import { appConfig } from '@root/app.config';
     background-color: var(--color-bg-header);
     color: var(--color-on-header);
     padding: 0 var(--content-padding);
+    z-index: 89;
+
+    > nav {
+      display: none;
+    }
   }
 
-  img {
-    display: block;
-    height: auto;
-    width: auto;
-    max-width: var(--logo-width);
+  .root-link {
+    filter: none !important;
+
+    img {
+      display: block;
+      height: auto;
+      width: auto;
+      margin: 0 2rem;
+      max-width: var(--logo-width);
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    header > nav {
+      display: block;
+    }
   }
 </style>
