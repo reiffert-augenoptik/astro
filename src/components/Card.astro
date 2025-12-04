@@ -12,7 +12,9 @@ const { caption, href, height, width } = { ...Astro.props };
     display: inline-block;
     transition: scale 200ms;
     scale: 1;
-
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    max-height: 40svh;
     filter: none !important;
 
     &:hover {
@@ -43,6 +45,13 @@ const { caption, href, height, width } = { ...Astro.props };
       margin: auto;
       font-size: x-large;
       font-weight: bolder;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .card {
+      max-width: unset;
+      max-height: unset;
     }
   }
 </style>
