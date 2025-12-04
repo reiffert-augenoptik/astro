@@ -10,7 +10,6 @@ import { Icon } from 'astro-icon/components';
   import { isSidebarOpen } from '@src/store';
 
   const button = document.getElementById('sidebar-button')!;
-  const icon = document.getElementById('sidebar-button-icon')!;
 
   button.addEventListener('click', () =>
     isSidebarOpen.set(!isSidebarOpen.get())
