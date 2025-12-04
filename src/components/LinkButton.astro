@@ -8,12 +8,15 @@ const { href } = { ...Astro.props };
 
 <style>
   a {
-    margin: 1rem 0;
+    display: block;
+    width: fit-content;
+    margin: calc(2 * var(--content-padding)) auto;
     padding: 1rem 2rem;
     background-color: var(--color-bg-primary);
     color: var(--color-on-primary);
     text-transform: uppercase;
     text-decoration: none !important;
-    size: x-large;
+    border-radius: var(--border-radius);
+    letter-spacing: 0.1em;
   }
 </style>

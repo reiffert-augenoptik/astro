@@ -10,10 +10,17 @@
 
 body {
   font-family: 'Minerva Modern', sans-serif;
+  letter-spacing: 0.035em;
 }
 
 b,
-strong {
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Minerva Modern Bold', sans-serif;
   font-weight: normal;
 }

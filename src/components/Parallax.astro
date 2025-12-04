@@ -1,12 +1,16 @@
 ---
-const { height = '600px', maxHeight = '100svw' } = { ...Astro.props };
+const {
+  height = '600px',
+  maxHeight = '100svw',
+  adjustTop = '0px',
+} = { ...Astro.props };
 ---
 
 <div class="parallax">
   <slot />
 </div>
 
-<style define:vars={{ height, maxHeight }}>
+<style define:vars={{ height, maxHeight, adjustTop }}>
   .parallax {
     margin-left: calc(-1 * var(--content-padding));
     height: auto;
@@ -29,6 +33,7 @@ const { height = '600px', maxHeight = '100svw' } = { ...Astro.props };
       max-width: 100%;
       aspect-ratio: auto;
       position: relative;
+      top: calc(-1 * var(--adjustTop));
     }
   }
 </style>

@@ -1,0 +1,93 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+width: full
+title: Brillen
+description: TODO
+---
+
+import { Image } from 'astro:assets';
+import Parallax from '@components/Parallax.astro';
+import Box from '@components/Box.astro';
+import ImageWithText from '@components/ImageWithText.astro';
+import LinkButton from '@components/LinkButton.astro';
+import GlassesBrands from '@components/GlassesBrands/index.astro';
+import img1 from './img-1.jpg';
+import img2 from './img-2.jpg';
+
+<Parallax adjustTop="15svw">
+  <Image src={img1} alt="" />
+</Parallax>
+
+<Box width="small" align="left">
+  # Deine neue Brille.
+
+Mit viel Erfahrung, Sorgfalt und dem nötigen Fingerspitzengefühl suchen wir die besten Brillen für Dich aus. Wir bieten Dir die perfekte Mischung aus Style und Qualität und sind dafür stetig auf der Suche nach dem optimalen Sortiment.
+
+Zu unseren Partnern und Lieferanten pflegen wir ein enges und freundschaftliches Verhältnis. Dadurch bekommst Du bei Reiffert Optik das Beste aus mehreren Welten: Deine neue Brille ist ein schickes Modeaccessoire, ermöglicht Dir maximalen Sehkomfort und garantiert Dir langfristige Zufriedenheit.
+
+Wir freuen uns darauf, auch für Dich die perfekte Brille zu finden.
+
+</Box>
+
+<ImageWithText imageWidth="600px">
+  <Image slot="image" src={img2} alt="" />
+  <h3 slot="text">Das Sehen ist unser größtes Fenster zur Welt.</h3>
+</ImageWithText>
+
+<Box width="medium" align="left">
+  ## Sehprofil
+  Die Grundlage für das perfekte Sehen ist die korrekte Messung der Sehstärke unter Berücksichtigung individueller Sehgewohnheiten. Bei Reiffert Augenoptik wird diese wichtige Überprüfung ausschließlich von ausgebildeten Augenoptikern und Augenoptikermeistern durchgeführt. Mit modernsten Messgeräten von Zeiss bestimmen wir Deine Sehstärke auf bis zu 0.01 Dioptrien genau und optimieren die Brillengläser bestmöglich.
+
+Auf diese Weise ermöglichen wir Dir das perfekte Seherlebnis.
+
+<hr />
+
+## Untersuchung
+
+Mehr als 80 Prozent unserer Sinneswahrnehmung wird über das Sehen generiert. Die Gesundheit der Augen ist somit eines der höchsten Güter.
+
+Mithilfe neuester Geräte untersuchen wir Dein Auge auf Auffälligkeiten. So können eventuelle Probleme frühzeitig erkannt werden. Durch eine hochauflösende Kamera können wir detaillierte Aufnahmen von Deinen Augen machen und diese über Jahre hinweg miteinander vergleichen.
+
+<hr />
+
+## Werkstatt
+
+Transparenz und Regionalität stehen bei Reiffert Augenoptik im Mittelpunkt. Deine neue Brille wird direkt bei uns im Haus gefertigt. In unserer Meister-Werkstatt treffen modernste Geräte auf traditionelle Handwerkskunst.
+
+Die Herstellung Deiner neuen Brille ist bei uns kein Geheimnis hinter verschlossen Türen. In unserer gläsernen Werkstatt kannst Du uns jederzeit bei der Arbeit zusehen.
+
+<hr />
+
+## Parkplätze
+
+Parken kannst Du bei uns kostenfrei und direkt vor der Türe. Wir haben ausreichend Parkplätze für all unsere Kunden, sodass Du bequem und stressfrei zu uns kommen kannst.
+
+<hr />
+
+## Reiffert-Service
+
+Damit Du Dich bei uns rundum wohlfühlst, hält Reiffert Augenoptik zahlreiche Leistungen für Dich bereit: Gerne bieten wir Dir zu Deinem Besuch bei uns eine Auswahl kalter und warmer Getränke.
+
+Unser umfangreicher Brillen-Komplett-Service inklusive Anpassung, Kontrolle, Schrauben nachdrehen, Profi-Reinigung und vielem mehr ist jederzeit kostenfrei.
+
+Du kannst Dich zwischen unseren tollen Brillen nicht sofort entscheiden? Kein Problem. Gerne kannst Du eine Auswahl schicker Fassungen zur Anprobe ausleihen und all Deinen Freunden und Angehörigen zeigen.
+
+<hr />
+
+## Zufriedenheit
+
+Wir garantieren Dir eine problemlose Eingewöhnung und maximale Zufriedenheit mit Deiner neuen Brille oder auch Kontaktlinse. Sollte sich Dein neues Produkt dennoch innerhalb der ersten 3 Monate nicht perfekt anfühlen, sorgen wir für eine passende Lösung.
+
+Deine Zufriedenheit ist unser Antrieb.
+
+  <hr/>
+</Box>
+
+<Box width="x-small" align="center">
+  ## Jetzt online Termin vereinbaren!
+
+  <LinkButton href="termin">TERMIN</LinkButton>
+  
+</Box>
+
+<GlassesBrands />

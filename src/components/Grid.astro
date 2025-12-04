@@ -1,5 +1,5 @@
 ---
-const { columnWidth } = Astro.props;
+
 ---
 
 <div class="grid">
@@ -13,6 +13,10 @@ const { columnWidth } = Astro.props;
     > * {
       margin: 0.5rem;
       max-width: calc(100% - 1rem);
+    }
+
+    img {
+      border-radius: var(--border-radius);
     }
   }
 </style>

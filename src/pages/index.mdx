@@ -1,7 +1,8 @@
 ---
 layout: '@layouts/DefaultLayout.astro'
-align: 'center'
-width: 'full'
+align: center
+width: full
+description: TODO
 ---
 
 import { Image } from 'astro:assets';
@@ -18,15 +19,15 @@ import img4 from './img-4.jpg';
 import img5 from './img-5.jpg';
 import img6 from './img-6.png';
 
-<Parallax>
-  <Image src={img1} alt="" style={{ top: "calc(-1 * 8svw)"}} />
+<Parallax adjustTop="8svw">
+  <Image src={img1} alt="" />
 </Parallax>
 
 # Brillenverliebt.
 
 <Box width="x-small" align="center">
-Bei Reiffert Augenoptik stehen Deine Wünsche und Ideen im Mittelpunkt.
-Unser Faible für schöne und hochwertige Brillen macht unsere Auswahl so einzigartig.
+  Bei Reiffert Augenoptik stehen Deine Wünsche und Ideen im Mittelpunkt.
+  Unser Faible für schöne und hochwertige Brillen macht unsere Auswahl so einzigartig.
 
 Das Rezept für ein perfektes Ergebnis: Ausgebildete Augenoptiker nehmen sich viel Zeit für Dich, bringen jahrelange Erfahrung und fundiertes Fachwissen in die Beratung ein.
 Obendrauf kommt eine Prise Brillenverliebtheit - fertig.
@@ -34,11 +35,11 @@ Obendrauf kommt eine Prise Brillenverliebtheit - fertig.
 Deine neue Brille findest Du hier.
 Lerne uns kennen.
 
-<br />
-<LinkButton href="team">DAS TEAM</LinkButton>
-<br />
-<br />
-<hr />
+  <LinkButton href="team">DAS TEAM</LinkButton>
+</Box>
+
+<Box width="x-small">
+  <hr />
 </Box>
 
 <Grid>
@@ -55,8 +56,8 @@ Lerne uns kennen.
 
 <br />
 
-<Parallax >
-  <Image src={img5} alt="" style={{ top: "calc(-1 * 8svw)"}}/>
+<Parallax adjustTop="8svw">
+  <Image src={img5} alt="" />
 </Parallax>
 
 # Regional verbunden.
@@ -76,6 +77,8 @@ Lerne uns kennen.
     Durch diese regionale Verbundenheit ermöglichen wir Dir die beste Qualität.
     Sprich uns gerne darauf an.
 
+</Box>
+
   <ImageWithText>
     <Image slot="image" src={img6} alt=""/>
     <p slot="text">
@@ -85,4 +88,3 @@ Lerne uns kennen.
     </p>
 
   </ImageWithText>
-</Box>

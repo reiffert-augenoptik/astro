@@ -1,0 +1,169 @@
+---
+import { Image } from 'astro:assets';
+import img1 from './images/img-1.webp';
+import img2 from './images/img-2.webp';
+import logoAdidas from './logos/logo-adidas.jpg';
+import logoAnahickmann from './logos/logo-anahickmann.jpeg';
+import logoBoss from './logos/logo-boss.png';
+import logoBossorange from './logos/logo-bossorange.jpg';
+import logoBattatura from './logos/logo-battatura.jpg';
+import logoCalvinklein from './logos/logo-calvinklein.png';
+import logoCazal from './logos/logo-cazal.jpg';
+import logoComma from './logos/logo-comma.jpg';
+import logoDilem from './logos/logo-dilem.png';
+import logoDolcegabbana from './logos/logo-dolcegabbana.jpg';
+import logoEmporioarmani from './logos/logo-emporioarmani.png';
+import logoEsprit from './logos/logo-esprit.jpg';
+import logoFlexon from './logos/logo-flexon.png';
+import logoFreigeist from './logos/logo-freigeist.jpg';
+import logoFunkfood from './logos/logo-funkfood.jpg';
+import logoGoetti from './logos/logo-goetti.png';
+import logoGucci from './logos/logo-gucci.jpg';
+import logoHickmann from './logos/logo-hickmann.jpeg';
+import logoHumphreys from './logos/logo-humphreys.png';
+import logoIneedyou from './logos/logo-ineedyou.jpg';
+import logoIvko from './logos/logo-ivko.jpg';
+import logoJackfrancis from './logos/logo-jackfrancis.jpg';
+import logoMango from './logos/logo-mango.png';
+import logoMarcopolo from './logos/logo-marcopolo.png';
+import logoMini from './logos/logo-mini.jpg';
+import logoNeubau from './logos/logo-neubau.jpg';
+import logoRayban from './logos/logo-rayban.jpg';
+import logoRoyrobson from './logos/logo-royrobson.jpg';
+import logoSilhouette from './logos/logo-silhouette.png';
+import logoTitanflex from './logos/logo-titanflex.png';
+import logoVistan from './logos/logo-vistan.jpg';
+import logoVogue from './logos/logo-vogue.png';
+import logoYoungfashion from './logos/logo-youngfashion.jpg';
+import logoZwo from './logos/logo-zwo.jpg';
+---
+
+<div class="glasses-brands">
+  <div class="row image-left">
+    <div class="image">
+      <Image src={img1} alt="Ein Kunde bekommt eine Tüte übergeben. " />
+    </div>
+    <div class="brands">
+      <Image src={logoAdidas} alt="Adidas" />
+      <Image src={logoBoss} alt="Huge Boss" />
+      <Image src={logoMarcopolo} alt="Marc O'Polo" />
+      <Image src={logoGoetti} alt="Götti" />
+      <Image src={logoHumphreys} alt="Humphrey's" />
+      <Image src={logoRayban} alt="Ray-Ban" />
+      <Image src={logoBossorange} alt="Boss Orange" />
+      <Image src={logoEsprit} alt="Esprit" />
+      <Image src={logoCazal} alt="Cazal" />
+    </div>
+  </div>
+  <div class="row image-right">
+    <div class="brands">
+      <Image src={logoComma} alt="Comma" />
+      <Image src={logoDolcegabbana} alt="Dolce & Gabbana" />
+      <Image src={logoMango} alt="Mango" />
+      <Image src={logoNeubau} alt="Neubau" />
+      <Image src={logoSilhouette} alt="Silhouette" />
+      <Image src={logoRoyrobson} alt="Roy Robson" />
+      <Image src={logoCalvinklein} alt="Calvin Klein" />
+      <Image src={logoFreigeist} alt="Freigeist" />
+      <Image src={logoGucci} alt="Gucci" />
+    </div>
+    <div class="image">
+      <Image
+        src={img2}
+        alt="Ein Kunde verlässt den Laden mit einer Tüte in der Hand. Die Tüte trägt die Aufschrift: Reiffert Augenoptik - Meine neue Brille."
+      />
+    </div>
+  </div>
+  <div class="brands">
+    <Image src={logoBattatura} alt="Battatura" />
+    <Image src={logoDilem} alt="Dilem" />
+    <Image src={logoTitanflex} alt="Titan Flex" />
+    <Image src={logoEmporioarmani} alt="Emporio Armani" />
+    <Image src={logoVistan} alt="Vistan" />
+    <Image src={logoFlexon} alt="Flexon" />
+    <Image src={logoMini} alt="Mini" />
+    <Image src={logoZwo} alt="Zwo" />
+    <Image src={logoYoungfashion} alt="Young Fashion" />
+    <Image src={logoIneedyou} alt="Ineedyou" />
+    <Image src={logoIvko} alt="IVKO" />
+    <Image src={logoJackfrancis} alt="Jack & Francis" />
+    <Image src={logoFunkfood} alt="Funk Food" />
+    <Image src={logoHickmann} alt="Hickmann" />
+    <Image src={logoVogue} alt="Vogue" />
+    <Image src={logoAnahickmann} alt="Ana Hickmann" />
+    <b>...und viele weitere Marken!</b>
+  </div>
+</div>
+
+<style>
+  .glasses-brands {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-left {
+    grid-template-columns: 400px 1fr;
+  }
+
+  .image-right {
+    grid-template-columns: 1fr 400px;
+  }
+
+  .image {
+    height: 400px;
+    width: 400px;
+    max-width: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .brands {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: var(--content-padding) 0;
+    gap: var(--content-padding);
+
+    > * {
+      display: flex;
+      object-fit: contain;
+      height: 125px;
+      width: 175px;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .image {
+      width: 400px;
+      height: 600px;
+    }
+
+    .row {
+      display: grid;
+    }
+
+    .brands {
+      > * {
+        height: 150px;
+        width: 200px;
+      }
+    }
+  }
+</style>

@@ -1,5 +1,5 @@
 ---
-
+const { imageWidth = '400px' } = { ...Astro.props };
 ---
 
 <div class="image-with-textbox">
@@ -9,43 +9,44 @@
   </div>
 </div>
 
-<style>
+<style define:vars={{ imageWidth }}>
   .image-with-textbox {
-    --transform-container: translateX(0);
-    --transform-textbox: translateX(0);
-
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: var(--transform-container);
+    width: fit-content;
+    margin: calc(2 * var(--content-padding)) auto;
     max-width: 100svw;
 
     img {
       height: auto;
-      max-width: 400px;
+      max-width: min(
+        var(--imageWidth),
+        calc(100svw - 2 * var(--content-padding))
+      );
       aspect-ratio: auto;
+      border-radius: var(--border-radius);
     }
 
     .textbox {
-      top: 0;
-      right: 0;
-      transform: var(--transform-textbox);
-      max-width: 400px;
+      transform: translateY(-1rem);
+      max-width: min(400px, calc(100svw - 2 * var(--content-padding)));
       padding: var(--content-padding);
       background-color: var(--color-bg-primary);
       color: var(--color-on-primary);
+      border-radius: var(--border-radius);
+      text-align: center;
     }
   }
 
   @media only screen and (min-width: 800px) {
     .image-with-textbox {
-      --transform-container: translateX(-12rem);
-      --transform-textbox: translate(16rem, 4rem);
+      flex-direction: row;
 
       .textbox {
-        position: absolute;
+        transform: translate(-2rem);
       }
     }
   }

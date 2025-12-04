@@ -38,7 +38,7 @@ import NavLink from '@components/NavLink.astro';
     position: fixed;
     top: 0px;
     left: var(--left);
-    transition: left 200ms;
+    transition: left 200ms ease-in-out;
     width: 100svw;
     height: 100svh;
     background-color: var(--color-bg-content);
@@ -55,6 +55,7 @@ import NavLink from '@components/NavLink.astro';
       height: calc(100svh - var(--app-header-height));
       display: flex;
       flex-direction: column;
+      gap: 0.5rem;
       padding: var(--content-padding);
       border-top: 1px solid #ddd;
     }
