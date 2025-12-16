@@ -9,5 +9,11 @@ const { align = 'start', width = 'large' } = { ...Astro.props };
 <style>
   div {
     margin: calc(2 * var(--content-padding)) auto;
+
+    > img {
+      border-radius: var(--border-radius);
+      max-width: 100%;
+      height: auto;
+    }
   }
 </style>

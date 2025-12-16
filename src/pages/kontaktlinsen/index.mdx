@@ -1,0 +1,44 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+width: full
+title: Kontaktlinsen
+description: TODO
+---
+
+import Parallax from '@components/Parallax.astro';
+import { Image } from 'astro:assets';
+import Box from '@components/Box.astro';
+import ImageWithText from '@components/ImageWithText.astro';
+import LinkButton from '@components/LinkButton.astro';
+import img1 from './img-1.jpg';
+import img2 from './img-2.jpg';
+import dualWearCampaign from './dual-wear-campaign.gif';
+
+<Parallax adjustTop="15svw">
+  <Image src={img1} alt="TODO" />
+</Parallax>
+
+<Box width="small" align="left">
+
+# Deine neue Kontaktlinse.
+
+Es gibt viele gute Gründe, Kontaktlinsen als Alternative zur Brille zu tragen. Kontaktlinsen sind perfekt beim Sport, zum Ausgehen, im Kino, auf Konzerten und für vieles mehr. Eine gut auf das Auge abgestimmte Linse ermöglicht Dir die maximale Flexibilität in allen Situationen.
+
+Bei Reiffert Augenoptik arbeiten zertifizierte Experten mit viel Erfahrung. Die Anpassung erfolgt in unserem hochmodern ausgestatteten Kontaktlinsenstudio. Mithilfe neuester Technologien analysieren wir die Begebenheiten deiner Augen und bestimmen die bestmögliche Kontaktlinse.
+
+Deine neue Kontaktlinse findest Du bei Reiffert Augenoptik.
+Wir freuen uns auf Deinen Besuch.
+
+</Box>
+
+<Box width="medium" align="center">
+  <Image src={img2} alt="TODO" />
+  <Image src={dualWearCampaign} alt="TODO" />
+</Box>
+
+<Box width="x-small" align="center">
+## Jetzt online Termin vereinbaren!
+
+<LinkButton href="termin">TERMIN</LinkButton>
+
+</Box>
