@@ -1,6 +1,14 @@
 declare global {
   interface Frontmatter {
     /**
+     * The title of the page.
+     */
+    title?: string;
+    /**
+     * A short text describing the page.
+     */
+    description?: string;
+    /**
      * The text alignment of the page. By default, text is left-aligned.
      * @default 'start'
      */

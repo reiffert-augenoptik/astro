@@ -1,11 +1,13 @@
 ---
 import HtmlHead from './HtmlHead.astro';
 import '@src/styles/global.css';
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="spx-app">
-  <HtmlHead />
+  <HtmlHead title={title} description={description} />
   <body>
     <slot />
   </body>

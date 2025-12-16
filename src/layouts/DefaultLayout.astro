@@ -9,10 +9,10 @@ const { frontmatter }: { frontmatter: Frontmatter } = {
   ...Astro.props,
 };
 
-const { align = 'start', width = 'large' } = frontmatter;
+const { align = 'start', width = 'large', title, description } = frontmatter;
 ---
 
-<HtmlRoot>
+<HtmlRoot title={title} description={description}>
   <AppHeader />
   <AppSidebar />
   <main style={`text-align: ${align}; flex-grow: 1;`}>

@@ -1,5 +1,5 @@
 export const appConfig = {
-  title: 'REIFFERT Augenoptik & Hörakustik',
+  title: 'Reiffert Augenoptik & Hörakustik',
   businessInfo: {
     adress: 'Ludwig-Pfeuffer-Ring 6, Giebelstadt, BY, 97232, Germany',
     phone: '09334 9753043',
