@@ -5,11 +5,17 @@ title: Hörakustik
 description: TODO
 ---
 
+import Parallax from '@components/Parallax.astro';
 import { Image } from 'astro:assets';
 import Box from '@components/Box.astro';
 import ImageWithText from '@components/ImageWithText.astro';
 import LinkButton from '@components/LinkButton.astro';
 import img1 from './img-1.jpg';
+import img2 from './img-2.jpg';
+
+<Parallax adjustTop="10svw">
+  <Image src={img1} alt="TODO" />
+</Parallax>
 
 <Box width="small" align="left">
 
@@ -22,7 +28,7 @@ Durch einen Hörverlust können Teile der Sprachinformationen verloren gehen. In
 </Box>
 
 <ImageWithText imageWidth="600px">
-  <Image slot="image" src={img1} alt="TODO" />
+  <Image slot="image" src={img2} alt="TODO" />
   <h3 slot="text">
     Nicht zu sehen trennt uns von den Dingen. Nicht zu hören aber, trennt uns
     von den Menschen.
