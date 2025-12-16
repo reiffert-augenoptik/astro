@@ -25,7 +25,12 @@ import NavLink from './NavLink.astro';
 
   <div class="opening-hours">
     <b>Öffnungszeiten:</b>
-    {appConfig.businessInfo.openingHours.map((element) => <p>{element}</p>)}
+    <p>{appConfig.businessInfo.openingHours.monday}</p>
+    <p>{appConfig.businessInfo.openingHours.tuesday}</p>
+    <p>{appConfig.businessInfo.openingHours.wednesday}</p>
+    <p>{appConfig.businessInfo.openingHours.thursday}</p>
+    <p>{appConfig.businessInfo.openingHours.friday}</p>
+    <p>{appConfig.businessInfo.openingHours.saturday}</p>
   </div>
 
   <div class="footer-links">

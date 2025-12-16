@@ -9,7 +9,7 @@ import Box from '@components/Box.astro';
 import YouTube from '@components/YouTube.astro';
 import Grid from '@components/Grid.astro';
 import TeamMember from '@components/TeamMember.astro';
-
+import { appConfig } from '@root/app.config.ts';
 import selinaSchweizer from './selina-schweizer.webp';
 import rebeccaReiffert from './rebecca-reiffert.webp';
 import elenaKohlhepp from './elena-kohlhepp.webp';
@@ -113,7 +113,7 @@ import emptySpot from './empty-spot.webp';
     </TeamMember>
 
     <TeamMember image={emptySpot} name="Werde Teil unseres Teams!">
-    Wir suchen engagierte Hörakustiker:innen & Augenoptiker:innen mit Herz, Handwerk und Hingabe. Freu dich auf ein familiäres Team, moderne Technik & echte Wertschätzung. Jetzt bewerben unter <a href="mailto:post@reiffert-giebelstadt.de">post@reiffert-giebelstadt.de</a>
+    Wir suchen engagierte Hörakustiker:innen & Augenoptiker:innen mit Herz, Handwerk und Hingabe. Freu dich auf ein familiäres Team, moderne Technik & echte Wertschätzung. Jetzt bewerben unter <a href={appConfig.businessInfo.mail}>{appConfig.businessInfo.mail}</a>
     </TeamMember>
 
   </Grid>

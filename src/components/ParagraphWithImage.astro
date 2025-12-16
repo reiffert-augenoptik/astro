@@ -1,0 +1,48 @@
+---
+import Grid from '@components/Grid.astro';
+import { Image } from 'astro:assets';
+
+const {
+  imagePosition = 'left',
+  imageWidth = '600px',
+  image,
+  alt,
+} = Astro.props;
+---
+
+<div class="paragraph-with-image" data-imagePosition={imagePosition}>
+  <Grid>
+    <Image src={image} alt={alt} />
+    <div class="paragraph"><slot /></div>
+  </Grid>
+</div>
+
+<style define:vars={{ imageWidth: imageWidth }}>
+  .paragraph-with-image {
+    img {
+      width: var(--imageWidth);
+      height: auto;
+    }
+    .paragraph {
+      direction: ltr;
+      width: var(--imageWidth);
+      text-align: start;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .paragraph-with-image {
+      &[data-imagePosition='right'] {
+        direction: rtl;
+
+        .paragraph {
+          text-align: right;
+        }
+      }
+
+      .paragraph {
+        width: calc(100% - var(--imageWidth) - 2rem);
+      }
+    }
+  }
+</style>
