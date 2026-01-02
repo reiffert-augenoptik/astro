@@ -1,0 +1,26 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+width: full
+title: 404
+description: Diese Seite existiert nicht.
+---
+
+import Box from '@components/Box.astro';
+import { Image } from 'astro:assets';
+import david from 'david.jpg';
+import LinkButton from '@components/LinkButton.astro';
+
+<Box size="small" align="center">
+# 404 — Seite nicht gefunden
+
+<Image
+  src={david}
+  alt="404!"
+  style="height: 200px; width: auto; animation: spin 5s linear infinite"
+/>
+
+Diese Seite existiert leider nicht. Hier kommst Du wieder zurück:
+
+<LinkButton href="">STARTSEITE</LinkButton>
+
+</Box>

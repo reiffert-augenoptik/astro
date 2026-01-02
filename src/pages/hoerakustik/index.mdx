@@ -1,0 +1,107 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+width: full
+title: Hörakustik
+description: TODO
+---
+
+import Parallax from '@components/Parallax.astro';
+import { Image } from 'astro:assets';
+import Box from '@components/Box.astro';
+import ImageWithText from '@components/ImageWithText.astro';
+import LinkButton from '@components/LinkButton.astro';
+import img1 from './img-1.jpg';
+import img2 from './img-2.jpg';
+
+<Parallax adjustTop="10svw">
+  <Image src={img1} alt="TODO" />
+</Parallax>
+
+<Box width="small" align="left">
+
+# Deine neue Hörhilfe.
+
+Wir Menschen nehmen über unser Gehör akustische Informationen aus der Umwelt wahr und nutzen sie, um eine Vorstellung unserer Umgebung zu gewinnen.
+
+Durch einen Hörverlust können Teile der Sprachinformationen verloren gehen. In lauter Umgebung kann ein Schwerhöriger die Sprache des Gegenübers oft nur schwer von Umgebungsgeräuschen trennen. Gutes Hören ist so wichtig, weil es die Verbindung zu unseren Mitmenschen ermöglicht.
+
+</Box>
+
+<ImageWithText imageWidth="600px">
+  <Image slot="image" src={img2} alt="TODO" />
+  <h3 slot="text">
+    Nicht zu sehen trennt uns von den Dingen. Nicht zu hören aber, trennt uns
+    von den Menschen.
+  </h3>
+</ImageWithText>
+
+<Box width="medium" align="left">
+## Hörprofil
+
+Wir bei Reiffert Augenoptik und Hörakustik wissen, dass die erstmalige Verordnung eines Hörsystems oft weniger mit Freude über den zu erwartenden Hörgewinn verbunden ist, sondern vielmehr zahlreiche Fragen und Unsicherheiten auslöst.
+
+Wir sind optimal auf diese Situation vorbereitet und wissen, wie wir ihr begegnen können. Wir ermitteln gemeinsam Ihre Wünsche und schaffen realistische und lösbare Perspektiven. Nach der Ton- und Sprachaudiometrie mit modernster Technik, folgt ein Beratungsgespräch, in dem wir erklären, wie wir Ihnen das für Sie perfekt zugeschnittene Hörsystem anpassen können. Sie dürfen unverbindlich und kostenfrei verschiedene Hörsysteme mit nach Hause nehmen und ausführlich testen.
+
+Wir nehmen uns Zeit, um Ihre individuellen Bedürfnisse zu ermitteln.
+
+<hr />
+
+## Hörsysteme
+
+Bei Reiffert Augenoptik und Hörakustik bieten wir Hörsysteme aller Preis- und Qualitätsstufen für Sie an - vom zuzahlungsfreien Kassengerät bis zum modernen High-End System für alle Bedürfnisse und Anwendungen.
+
+Je nach Wunsch und Vorstellung unserer Kunden, können auch Akkugeräte getestet werden – für alle, die keine Batterien mehr wechseln wollen.
+
+<hr />
+
+## Zubehör
+
+Selbstverständlich bekommen Sie bei Reiffert Augenoptik und Hörakustik Zubehör wie Batterien, Ladegeräte und Akkus, Lösungen für den TV, wie TV-Adapter oder Fernbedienungen, sowie Pflegeprodukte aller Art.
+
+Des Weiteren können Sie bei uns angepassten und unangepassten Gehörschutz für verschiedene Situationen erwerben.
+
+<hr />
+
+## Werkstatt
+
+Wie auch in der Augenoptik verfügen wir über eine eigene Werkstatt, um ihre Hörsysteme und Ohrstücke direkt vor Ort selbst bearbeiten und optimal anpassen zu können.
+
+<hr />
+
+## Parkplätze
+
+Parken können Sie bei uns kostenfrei und direkt vor der Türe. Wir haben ausreichend Parkplätze für alle unsere Kunden, sodass Sie bequem und stressfrei zu uns kommen können.
+
+<hr />
+
+## Fahrservice
+
+Du oder einer Deiner Angehörigen ist nicht mobil? Durch unseren Hol- und Bringservice ist das kein Problem.
+
+Wir fahren Dich von Deiner Wohnung zu unserem Ladengeschäft und anschließend wieder zurück.
+Ruf uns einfach an, wir freuen uns darauf Dich zu Hause abholen zu dürfen. Kostenfrei und ohne Verpflichtungen.
+
+<hr />
+
+## Reiffert-Service
+
+Damit Du Dich bei uns rundum wohlfühlst, hält Reiffert Augenoptik zahlreiche Leistungen für Dich bereit. Gerne bieten wir Dir zu Deinem Besuch bei uns eine Auswahl kalter und warmer Getränke.
+
+Unser umfangreicher Komplett-Service inklusive Anpassung, Kontrolle, Profi-Reinigung und vielem mehr ist jederzeit kostenfrei.
+
+<hr />
+
+## Zufriedenheit
+
+Wir garantieren Dir eine problemlose Eingewöhnung und maximale Zufriedenheit mit Deiner neuen Hörhilfe. Sollte sich Dein neues Produkt dennoch innerhalb der ersten 3 Monate nicht perfekt anfühlen, sorgen wir für eine passende Lösung.
+
+Deine Zufriedenheit ist unser Antrieb.
+
+</Box>
+
+<Box width="x-small" align="center">
+## Jetzt online Termin vereinbaren!
+
+<LinkButton href="termin">TERMIN</LinkButton>
+
+</Box>

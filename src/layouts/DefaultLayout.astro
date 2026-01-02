@@ -9,9 +9,11 @@ const { frontmatter }: { frontmatter: Frontmatter } = {
   frontmatter: {},
   ...Astro.props,
 };
+
+const { title, description } = frontmatter;
 ---
 
-<HtmlRoot>
+<HtmlRoot title={title} description={description}>
   <AppHeader />
   <AppSidebar />
   <AppContent align={frontmatter.align} width={frontmatter.width}>

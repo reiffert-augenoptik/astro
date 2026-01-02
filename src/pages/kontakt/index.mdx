@@ -1,0 +1,50 @@
+---
+layout: '@layouts/DefaultLayout.astro'
+align: 'center'
+title: 'Kontakt'
+description: 'TODO'
+---
+
+import Box from "@components/Box.astro";
+import ParagraphWithImage from "@components/ParagraphWithImage.astro";
+import GoogleMaps from "@components/GoogleMaps.astro";
+import { appConfig } from "@root/app.config.ts";
+import img1 from "./img-1.webp";
+import lageplan from "./lageplan.webp";
+
+<Box width="medium">
+<ParagraphWithImage image={img1} alt="TODO">
+# LERNE UNS KENNEN.
+
+Mit unserem hochmodernen Brillengeschäft haben wir uns einen Traum erfüllt. Mit viel Freude und Begeisterung finden wir und unsere Mitarbeiter auch für Dich die perfekte Lösung. Du kannst uns auf folgenden Wegen erreichen:
+
+Rufe uns an: **{appConfig.businessInfo.phone}**
+
+Sende eine Email: <a href={appConfig.businessInfo.mail}>**{appConfig.businessInfo.mail}**</a>
+
+Nutze das **Kontaktformular** weiter unten oder **komme einfach vorbei.**
+
+**Wir freuen uns auf Dich!**
+</ParagraphWithImage>
+<ParagraphWithImage image={lageplan} alt="Lageplan" imagePosition="right">
+# WIR SIND FÜR DICH DA.
+
+**Adresse:**
+
+{appConfig.title}<br />
+{appConfig.businessInfo.street}<br />
+{appConfig.businessInfo.city}<br />
+
+**Öffnungszeiten:**
+{appConfig.businessInfo.openingHours.monday}<br />
+{appConfig.businessInfo.openingHours.tuesday}<br />
+{appConfig.businessInfo.openingHours.wednesday}<br />
+{appConfig.businessInfo.openingHours.thursday}<br />
+{appConfig.businessInfo.openingHours.friday}<br />
+{appConfig.businessInfo.openingHours.saturday}<br />
+</ParagraphWithImage>
+</Box>
+
+<Box width="small">
+  <GoogleMaps />
+</Box>
