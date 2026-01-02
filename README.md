@@ -54,11 +54,11 @@ npm run format
 
 ## Get the built output
 
-Any successful pipeline run on the main branch will build the current version of the website to as well as deploy it to https://reiffert-augenoptik.github.io/astro/.
+Any successful pipeline run on the main branch will build the current version of the website to as well as deploy it to https://reiffert-augenoptik.gsithub.io/astro/.
 
 To get the built artifact:
 
 1. Navigate to https://github.com/reiffert-augenoptik/astro/actions/workflows/main.yml
 2. Open the newest (top-most) successful Workflow
-3. In the 'Artifacts' section located at the bottom of the page, download the 'github-pages' artifact
+3. In the 'Artifacts' section located at the bottom of the page, download the 'website' artifact
 4. Extract the contents of the file and put them wherever you need them
