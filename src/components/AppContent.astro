@@ -20,5 +20,13 @@ const { align = 'start', width = 'large' } = Astro.props;
 
   article {
     margin: 0 auto;
+
+    > * {
+      max-width: 100%;
+    }
+
+    > img {
+      height: auto;
+    }
   }
 </style>
