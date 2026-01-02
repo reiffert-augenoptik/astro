@@ -21,7 +21,7 @@ const { align = 'start', width = 'large' } = Astro.props;
   article {
     margin: 0 auto;
 
-    > * {
+    > *:not(.parallax) {
       max-width: 100%;
     }
 
