@@ -2,24 +2,21 @@
 import HtmlRoot from '@components/HtmlRoot.astro';
 import AppHeader from '@components/AppHeader.astro';
 import AppSidebar from '@components/AppSidebar.astro';
+import AppContent from '@components/AppContent.astro';
 import AppFooter from '@components/AppFooter.astro';
 
 const { frontmatter }: { frontmatter: Frontmatter } = {
   frontmatter: {},
   ...Astro.props,
 };
-
-const { align = 'start', width = 'large' } = frontmatter;
 ---
 
 <HtmlRoot>
   <AppHeader />
   <AppSidebar />
-  <main style={`text-align: ${align}; flex-grow: 1;`}>
-    <article style={`max-width: var(--content-width-${width});`}>
-      <slot />
-    </article>
-  </main>
+  <AppContent align={frontmatter.align} width={frontmatter.width}>
+    <slot />
+  </AppContent>
   <AppFooter />
 </HtmlRoot>
 
@@ -40,18 +37,3 @@ const { align = 'start', width = 'large' } = frontmatter;
     }
   });
 </script>
-
-<style>
-  main {
-    flex-grow: 1;
-    padding-left: var(--content-padding);
-    padding-right: var(--content-padding);
-    padding-bottom: calc(2 * var(--content-padding));
-    background-color: var(--color-bg-content);
-    color: var(--color-on-content);
-  }
-
-  article {
-    margin: 0 auto;
-  }
-</style>
