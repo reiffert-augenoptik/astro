@@ -1,0 +1,22 @@
+name: Pull Requests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  run_checks:
+    name: Run checks
+    uses: ./.github/workflows/check.yml
+  dependabot_auto_merge:
+    name: Auto-merge dependabot PR
+    uses: spuxx-dev/ci-cd/.github/workflows/dependabot_auto_merge.yml@v5.0.0
+    needs:
+      - run_checks
+    with:
+      merge-method: squash
