@@ -54,7 +54,7 @@ npm run format
 
 ## Get the built output
 
-Any successful pipeline run on the main branch will build the current version of the website to as well as deploy it to https://reiffert-augenoptik.gsithub.io/astro/.
+Any successful pipeline run on the main branch will build the current version of the website to as well as deploy it to https://reiffert-augenoptik.github.io/astro/.
 
 To get the built artifact:
 
