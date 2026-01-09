@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/mdx": "4.3.6",
     "@astrojs/sitemap": "3.6.0",
-    "astro": "5.16.6",
+    "astro": "5.16.7",
     "astro-icon": "1.1.5",
     "nanostores": "1.1.0",
     "simple-parallax-js": "6.3.3"
