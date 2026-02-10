@@ -3,14 +3,18 @@ layout: '@layouts/DefaultLayout.astro'
 align: center
 width: medium
 title: Aktuelles
-description: TODO
+description: Aktuelle Werbungen und Informationen
 ---
 
 import { Image } from 'astro:assets';
 import adRayBan from './ad-ray-ban.webp';
 import adSpring2025 from './ad-spring-2025.webp';
+import adAuberBote2026 from './ad-auber-bote-2026.webp';
+import AdWeihnachten2025 from './Ad-Weihnachten-2025.webp';
 
 # Aktuelles
 
-<Image src={adRayBan} alt="Anzeige Ray-Ban" />
+<Image src={adAuberBote2026} alt="Anzeige Auber Bote 2026" />
+<Image src={AdWeihnachten2025} alt="Anzeige Weihnachten 2025" />
 <Image src={adSpring2025} alt="Anzeige Frühling 2025" />
+<Image src={adRayBan} alt="Anzeige Ray-Ban" />
