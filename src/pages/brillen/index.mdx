@@ -2,7 +2,7 @@
 layout: '@layouts/DefaultLayout.astro'
 width: full
 title: Brillen
-description: TODO
+description: 'Unsere Brillen und Dienstleistungen rund um das perfekte Sehen'
 ---
 
 import { Image } from 'astro:assets';
@@ -15,7 +15,7 @@ import img1 from './img-1.jpg';
 import img2 from './img-2.jpg';
 
 <Parallax adjustTop="15svw">
-  <Image src={img1} alt="TODO" />
+  <Image src={img1} alt="Moderne Brillenfassungen im Schaufenster" />
 </Parallax>
 
 <Box width="small" align="left">
@@ -30,7 +30,7 @@ Wir freuen uns darauf, auch für Dich die perfekte Brille zu finden.
 </Box>
 
 <ImageWithText imageWidth="600px">
-  <Image slot="image" src={img2} alt="TODO" />
+  <Image slot="image" src={img2} alt="Beratung bei der Auswahl einer Brille" />
   <h3 slot="text">Das Sehen ist unser größtes Fenster zur Welt.</h3>
 </ImageWithText>
 
