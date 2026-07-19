@@ -13,22 +13,22 @@
   },
   "dependencies": {
     "@astrojs/mdx": "4.3.13",
-    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/sitemap": "3.7.2",
     "astro": "5.18.0",
     "astro-icon": "1.1.5",
-    "nanostores": "1.1.1",
+    "nanostores": "1.2.0",
     "simple-parallax-js": "6.3.3"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.7",
-    "@eslint/js": "10.0.1",
+    "@astrojs/check": "0.9.8",
+    "@eslint/js": "9.39.2",
     "@iconify-json/mdi-light": "1.2.2",
     "eslint": "9.39.2",
     "globals": "17.4.0",
-    "prettier": "3.8.1",
+    "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.56.1",
+    "typescript-eslint": "8.58.1",
     "vite-tsconfig-paths": "6.1.1"
   }
 }
