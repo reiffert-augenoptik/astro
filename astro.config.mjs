@@ -8,8 +8,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://reiffert-augenoptik.github.io/astro/',
-  base: '/astro/',
+  site: 'https://www.reiffert-optik.de',
+  base: '/',
   integrations: [mdx(), astroIcon(), sitemap()],
   devToolbar: { enabled: false },
   build: {
