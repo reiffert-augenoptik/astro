@@ -17,7 +17,7 @@
     "astro": "5.18.0",
     "astro-icon": "1.2.0",
     "nanostores": "1.4.1",
-    "simple-parallax-js": "6.3.3"
+    "simple-parallax-js": "7.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
