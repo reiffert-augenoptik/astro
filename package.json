@@ -16,7 +16,7 @@
     "@astrojs/sitemap": "3.7.4",
     "astro": "5.18.0",
     "astro-icon": "1.2.0",
-    "nanostores": "1.5.3",
+    "nanostores": "1.5.4",
     "simple-parallax-js": "7.0.0"
   },
   "devDependencies": {
